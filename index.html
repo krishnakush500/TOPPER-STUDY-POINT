@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exam Results - Topper Study Point</title>
+  <title>Exam Results - GAURAV STUDY POINT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Firebase SDK -->
@@ -30,7 +30,7 @@
     .director-details h3{font-size:1.1rem; margin-bottom:5px;}
     .director-details p{font-size:0.9rem;}
 
-    /* Moving Notice Text */
+    /* Moving Admission Text */
     .marquee-container {
       background:#ffc107;
       overflow:hidden;
@@ -52,70 +52,18 @@
       100% { transform: translateX(-100%); }
     }
     
-    /* About Coaching Section */
-    .about-coaching {
-      padding: 25px;
-      background: #fff;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .about-title {
-      font-size: 1.8rem;
-      color: #1a237e;
-      text-align: center;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #ffc107;
-    }
-    
-    .about-content {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: #333;
-      text-align: justify;
-    }
-    
-    .highlight-box {
-      background: linear-gradient(to right, #e8f4f8, #f0f8ff);
-      border-left: 4px solid #1a237e;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 5px;
-    }
-    
-    .highlight-box h4 {
-      color: #1a237e;
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-    
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-    
-    .feature-item {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 8px;
-      border-top: 3px solid #1a237e;
-    }
-    
-    .feature-item i {
-      color: #1a237e;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      display: block;
-    }
-    
-    .feature-item h4 {
-      color: #1a237e;
-      margin-bottom: 8px;
-    }
+    /* Toppers */
+    .toppers-section{padding:20px;background:#f5f5f5;text-align:center;}
+    .promo-text{font-size:0.95rem;line-height:1.6;color:#1a237e;font-weight:600;margin-bottom:20px;white-space:pre-line;text-align:left;padding:0 10px;}
+    .toppers-title{font-size:1.4rem;color:#b21f1f;margin:20px 0;text-align:center;}
+    .all-toppers{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;}
+    .topper-card{background:white;border-radius:8px;box-shadow:0 5px 10px rgba(0,0,0,0.1);overflow:hidden;text-align:center;transition:transform .3s;width:140px;padding:8px;}
+    .topper-card:hover{transform:translateY(-5px);}
+    .topper-rank{background:#1a237e;color:white;padding:5px;font-weight:600;font-size:0.8rem;}
+    .topper-photo{width:60px;height:60px;border-radius:50%;margin:10px auto;border:2px solid #1a237e;overflow:hidden;}
+    .topper-photo img{width:100%;height:100%;object-fit:cover;}
+    .topper-name{font-size:0.8rem;color:#333;margin-top:5px;height:35px;display:flex;align-items:center;justify-content:center;line-height:1.1;}
+    .topper-percentage{font-size:0.9rem;color:#1a237e;font-weight:700;margin:6px 0;}
 
     /* Firebase Results Section */
     .results-section { padding:20px; background:#f9f9f9; }
@@ -190,7 +138,7 @@
     /* Footer */
     .footer { background:#1a237e; color:white; text-align:center; padding:15px; font-size:0.9rem; }
     
-    /* Developer Contact Section */
+    /* Developer Contact Section - NEW */
     .developer-contact {
       background: #f8f9fa;
       padding: 20px;
@@ -269,15 +217,16 @@
       
       .results-list { grid-template-columns:1fr; }
       
+      .topper-card { width:120px; }
+      .topper-name { font-size:0.75rem; height:30px; }
+      
       .marks-table { font-size:0.85rem; min-width:450px; }
       .marks-table th, .marks-table td { padding:8px; }
       
       .action-buttons { flex-direction:column; }
       .action-buttons button { width:100%; justify-content:center; }
       
-      .about-title { font-size: 1.5rem; }
-      .about-content { font-size: 0.95rem; }
-      .features { grid-template-columns: 1fr; }
+      .promo-text { font-size:0.85rem; }
       
       /* Developer contact mobile */
       .contact-info {
@@ -301,8 +250,9 @@
       .result-card { padding:15px; }
       .marks-table { min-width:350px; }
       .marks-table th, .marks-table td { padding:6px; font-size:0.8rem; }
-      .about-title { font-size: 1.3rem; }
-      .about-content { font-size: 0.9rem; }
+      .topper-card { width:100px; padding:5px; }
+      .topper-photo { width:50px; height:50px; }
+      .topper-percentage { font-size:0.8rem; }
     }
 
   </style>
@@ -311,22 +261,26 @@
   <div class="container">
     <!-- Header -->
     <div class="header">
-      <h1 class="school-name">Topper Study Point</h1>
-      <p class="location">Patori, Samastipur</p>
+      <h1 class="school-name">GAURAV STUDY POINT</h1>
+      <p class="location">Mina Bazar, Badanpura Road, Gopalganj</p>
       <div class="director-info">
-        <div class="director-photo"><img src="https://i.ibb.co/4ggdyKnK/logo.jpg"></div>
+        <div class="director-photo"><img src="https://i.ibb.co/HLvyC7Gz/logo.jpg"></div>
         <div class="director-details">
           <h2>DIRECTOR</h2>
-          <h3>NITISH SIR</h3>
-          <p><i class="fas fa-phone"></i> Call: +91 9525826010</p>
+          <h3>MR. GAURAV SIR</h3>
+          <p><i class="fas fa-phone"></i> Call: +91 9263312022</p>
         </div>
       </div>
     </div>
 
-    <!-- Moving Notice Text -->
+    <!-- Moving Admission Text -->
     <div class="marquee-container">
-      <div class="marquee-content" id="marquee-content">
-        <!-- Notice content will be loaded from Firebase -->
+      <div class="marquee-content">
+        <span>📚 Admission is going on for 6th to 12th &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>📚 Admission is going on for 6th to 12th &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>📚 Admission is going on for 6th to 12th &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>📚 Admission is going on for 6th to 12th &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>📚 Admission is going on for 6th to 12th &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
       </div>
     </div>
 
@@ -351,9 +305,9 @@
       
       <div class="result-card" id="result-card">
         <div class="result-card-header">
-          <h2>Topper Study Point, Patori Samastipur</h2>
+          <h2>GAURAV STUDY POINT GOPALGANJ</h2>
           <h3 id="result-exam-name">Exam Name</h3>
-          <p>Under the guidance of <strong>NITISH SIR</strong></p>
+          <p>Under the guidance of <strong>MR. GAURAV SIR</strong></p>
         </div>
         
         <div class="student-info">
@@ -394,8 +348,8 @@
         </div>
         
         <div class="coaching-mention">
-          <p>This result is published by Topper Study Point, Patori Samastipur | Director: NITISH SIR</p>
-          <p>For any queries, contact: +91 9525826010</p>
+          <p>This result is published by GAURAV STUDY POINT, Gopalganj | Director: MR. GAURAV SIR</p>
+          <p>For any queries, contact: +91 9263312022</p>
         </div>
         
         <div class="action-buttons">
@@ -409,51 +363,85 @@
       </div>
     </div>
 
-    <!-- About Coaching Section -->
-    <div class="about-coaching">
-      <h2 class="about-title">About Topper Study Point</h2>
-      
-      <div class="about-content">
-        <p>Welcome to <strong>Topper Study Point</strong>, Patori, Samastipur's premier coaching institute dedicated to academic excellence and holistic development of students. Established with a vision to create future leaders, we provide quality education for students from 6th to 12th grade.</p>
-        
-        <div class="highlight-box">
-          <h4>🎯 Our Mission</h4>
-          <p>To provide comprehensive, quality education that empowers students to achieve academic excellence, develop critical thinking skills, and become responsible citizens.</p>
+    <!-- Toppers Section - ONLY 10 TOPPERS (as requested) -->
+    <div class="toppers-section">
+      <div class="promo-text">
+मात्र 7,200/- में संपूर्ण विषयों कि तैयारी करे और CBSE बोर्ड  एवं बिहार बोर्ड परीक्षा में 480+ अंक लाए।
+
+1. सभी विषयों का प्रिंटेट नोट्स
+2. चेप्टर वाइज VVI Objective प्रश्न
+3. चेप्टर वाइज VVI Subjective प्रश्न
+4. चेप्टर वाइज टेस्ट सीरीज
+5. पिछले 20 वर्षो का Question Bank का हल
+6. बोर्ड परीक्षा में 480+ अंक लाने का टिप्स & ट्रिक्स
+
+✨ प्रत्येक साल की तरह इस साल भी 2 जनवरी 2026 से सभी क्लासेज का नया बैच शुरू होने जा रहा है।
+
+🎯 जिसका एक ही मकसद होगा कि किसी भी हाल में 2027 में होने वाले बोर्ड परीक्षा में छात्रों को टॉप-10 में शामिल किया जाए।
+      </div>
+
+      <h2 class="toppers-title">-----OUR TOPPERS ------</h2>
+      <div class="all-toppers">
+        <!-- ONLY 10 TOPPERS (as requested) -->
+        <div class="topper-card">
+          <div class="topper-rank">1st</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/Jw8CzGzQ/IMG-20250904-WA0012.jpg"></div>
+          <h3 class="topper-name">रिंकी कुमारी</h3>
+          <div class="topper-percentage">469 अंक</div>
         </div>
-        
-        <p>At Topper Study Point, we believe that every student has the potential to excel. Our experienced faculty, innovative teaching methods, and personalized attention ensure that each student receives the guidance they need to succeed in both board exams and competitive entrance tests.</p>
-        
-        <div class="features">
-          <div class="feature-item">
-            <i class="fas fa-graduation-cap"></i>
-            <h4>Expert Faculty</h4>
-            <p>Highly qualified and experienced teachers dedicated to student success</p>
-          </div>
-          
-          <div class="feature-item">
-            <i class="fas fa-book"></i>
-            <h4>Comprehensive Study Material</h4>
-            <p>Well-researched study materials covering all topics in detail</p>
-          </div>
-          
-          <div class="feature-item">
-            <i class="fas fa-chart-line"></i>
-            <h4>Regular Tests & Analysis</h4>
-            <p>Weekly tests with detailed performance analysis and feedback</p>
-          </div>
-          
-          <div class="feature-item">
-            <i class="fas fa-users"></i>
-            <h4>Personalized Attention</h4>
-            <p>Small batch sizes ensuring individual attention to every student</p>
-          </div>
+        <div class="topper-card">
+          <div class="topper-rank">2nd</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/XxMqpmH5/IMG-20250904-WA0013.jpg"></div>
+          <h3 class="topper-name">साहिल कुमार</h3>
+          <div class="topper-percentage">465 अंक</div>
         </div>
-        
-        <div class="highlight-box">
-          <h4>📞 Join Us Today!</h4>
-          <p>Admissions are open for all classes (6th to 12th). Limited seats available. For admission and inquiries, contact:</p>
-          <p style="margin-top: 10px;"><strong>Nitish Sir: +91 9525826010</strong></p>
-          <p><strong>Address: Patori, Samastipur (In front of S.S. Girls High School)</strong></p>
+        <div class="topper-card">
+          <div class="topper-rank">3rd</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/G3VVPSqZ/IMG-20250904-WA0014.jpg"></div>
+          <h3 class="topper-name">रौनक कुमार</h3>
+          <div class="topper-percentage">453 अंक</div>
+        </div>
+        <div class="topper-card">
+          <div class="topper-rank">4th</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/TxNS2sQ8/IMG-20250904-WA0015.jpg"></div>
+          <h3 class="topper-name">सत्यम कुमार सिंह</h3>
+          <div class="topper-percentage">447 अंक</div>
+        </div>
+        <div class="topper-card">
+          <div class="topper-rank">5th</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/991nS5Cx/IMG-20250904-WA0016.jpg"></div>
+          <h3 class="topper-name">अभिराज कुमार</h3>
+          <div class="topper-percentage">446 अंक</div>
+        </div>
+        <div class="topper-card">
+          <div class="topper-rank">6th</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/pj5mp7JF/IMG-20250904-WA0017.jpg"></div>
+          <h3 class="topper-name">सोनी कुमारी</h3>
+          <div class="topper-percentage">446 अंक</div>
+        </div>
+        <div class="topper-card">
+          <div class="topper-rank">7th</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/JwGMNwF6/IMG-20250904-WA0018.jpg"></div>
+          <h3 class="topper-name">रिशु कुमारी राय</h3>
+          <div class="topper-percentage">445 अंक</div>
+        </div>
+        <div class="topper-card">
+          <div class="topper-rank">8th</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/JWhkzfbG/IMG-20250904-WA0019.jpg"></div>
+          <h3 class="topper-name">तपेश्वरी कुमारी</h3>
+          <div class="topper-percentage">444 अंक</div>
+        </div>
+        <div class="topper-card">
+          <div class="topper-rank">9th</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/21DCkH7y/IMG-20250904-WA0020.jpg"></div>
+          <h3 class="topper-name">राजकृत कुमार</h3>
+          <div class="topper-percentage">444 अंक</div>
+        </div>
+        <div class="topper-card">
+          <div class="topper-rank">10th</div>
+          <div class="topper-photo"><img src="https://i.ibb.co/4nn6YZdt/IMG-20250904-WA0021-1.jpg"></div>
+          <h3 class="topper-name">तरुण कुमार</h3>
+          <div class="topper-percentage">439 अंक</div>
         </div>
       </div>
     </div>
@@ -479,7 +467,7 @@
 
     <!-- Footer -->
     <div class="footer">
-      <p>&copy; 2025 Topper Study Point. All Rights Reserved.</p>
+      <p>&copy; 2023 GAURAV STUDY POINT. All Rights Reserved.</p>
     </div>
   </div>
 
@@ -490,12 +478,13 @@
   <script>
     // Firebase Configuration
     const firebaseConfig = {
-      apiKey: "AIzaSyC0CfwRBrVCa7k_eE8bTw8oJB2DYFvBjBw",
-      authDomain: "srishti-b56d3.firebaseapp.com",
-      projectId: "srishti-b56d3",
-      storageBucket: "srishti-b56d3.firebasestorage.app",
-      messagingSenderId: "150958353608",
-      appId: "1:150958353608:web:3c0d4a2f2ab0070cd709fd"
+      apiKey: "AIzaSyBoAqrgPwwM7GNyURqXrJEYWPihKKR8VGg",
+      authDomain: "quest-coaching.firebaseapp.com",
+      databaseURL: "https://quest-coaching-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "quest-coaching",
+      storageBucket: "quest-coaching.firebasestorage.app",
+      messagingSenderId: "131948734089",
+      appId: "1:131948734089:web:f4ba25110c8b1298360858"
     };
 
     // Initialize Firebase
@@ -509,17 +498,16 @@
     let currentStudentResult = null;
     let newResults = []; // Track which results are "new"
     let viewedResults = []; // Track which results have been viewed
-    let currentNotice = ""; // Store current notice
 
     // Load viewed results from localStorage
     function loadViewedResults() {
-      const stored = localStorage.getItem('topper_viewed_results');
+      const stored = localStorage.getItem('gaurav_viewed_results');
       viewedResults = stored ? JSON.parse(stored) : [];
     }
 
     // Save viewed results to localStorage
     function saveViewedResults() {
-      localStorage.setItem('topper_viewed_results', JSON.stringify(viewedResults));
+      localStorage.setItem('gaurav_viewed_results', JSON.stringify(viewedResults));
     }
 
     // Mark a result as viewed
@@ -533,42 +521,6 @@
     // Check if a result is "new" (not viewed yet)
     function isResultNew(resultId) {
       return !viewedResults.includes(resultId);
-    }
-
-    // Fetch notice from Firestore
-    async function fetchNotice() {
-      try {
-        const querySnapshot = await db.collection("notices").orderBy("createdAt", "desc").limit(1).get();
-        
-        if (!querySnapshot.empty) {
-          querySnapshot.forEach((doc) => {
-            const data = doc.data();
-            currentNotice = data.content || "All class has started enroll now";
-            
-            // Update marquee display
-            updateMarqueeDisplay();
-          });
-        } else {
-          // Default notice if none exists
-          currentNotice = "All class has started enroll now";
-          updateMarqueeDisplay();
-        }
-      } catch (error) {
-        console.error("Error fetching notice:", error);
-        currentNotice = "All class has started enroll now";
-        updateMarqueeDisplay();
-      }
-    }
-
-    // Update marquee display
-    function updateMarqueeDisplay() {
-      // Update marquee
-      const marqueeContent = document.getElementById('marquee-content');
-      let marqueeHtml = '';
-      for (let i = 0; i < 5; i++) {
-        marqueeHtml += `<span>📢 ${currentNotice} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>`;
-      }
-      marqueeContent.innerHTML = marqueeHtml;
     }
 
     // Fetch all results from Firestore
@@ -914,7 +866,7 @@
           // Generate PDF with optimized settings
           const options = {
             margin: [10, 10, 10, 10],
-            filename: `Result_${currentStudentResult?.rollNo || 'unknown'}.pdf`,
+            filename: `Gaurav_Study_Point_Result_${currentStudentResult?.rollNo || 'unknown'}.pdf`,
             image: { 
               type: 'jpeg', 
               quality: 0.98 
@@ -979,7 +931,7 @@
             try {
               const fallbackOptions = {
                 margin: 10,
-                filename: `Result_${currentStudentResult?.rollNo || 'unknown'}.pdf`,
+                filename: `Gaurav_Study_Point_Result_${currentStudentResult?.rollNo || 'unknown'}.pdf`,
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { scale: 2, useCORS: true },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
@@ -1000,10 +952,7 @@
     }
 
     // Initialize on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      fetchNotice(); // Fetch notice first
-      fetchAllResults(); // Then fetch results
-    });
+    document.addEventListener('DOMContentLoaded', fetchAllResults);
   </script>
 </body>
 </html>
